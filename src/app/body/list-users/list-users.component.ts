@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../Models/user';
 import { UserService } from '../Services/user.service';
 
@@ -18,12 +18,14 @@ export class ListUsersComponent implements OnInit {
     
   }
   getuser():void{
-    this.listserv.listUser("https://jsonplaceholder.typicode.com/users").subscribe(users =>{
+    this.listserv.listUser("https://jsonplaceholder.typicode.com/users/").subscribe(users =>{
       this.listhtml=users;
     
       
     });
-
+    
+    
+             
     
   }
 }
