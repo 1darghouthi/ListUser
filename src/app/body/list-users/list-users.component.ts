@@ -15,11 +15,15 @@ export class ListUsersComponent implements OnInit {
   ngOnInit(): void {
    this.getuser()
     
+    
   }
   getuser():void{
     this.listserv.listUser("https://jsonplaceholder.typicode.com/users").subscribe(users =>{
       this.listhtml=users;
+    
+      
     });
+
     
   }
 }
